@@ -1,3 +1,5 @@
+git push origin gh-pages
+
 jekyll build
 
 s3cmd del --recursive s3://www.sparklingcode.co/about --verbose
