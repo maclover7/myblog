@@ -28,24 +28,18 @@ go.
 you'll be building! This command may take a few minutes to run, so don't
 be worried if it's taking a little while.
 
-```
-$ L=/usr/local/bin/flynn && curl -sSL -A "`uname -sp`" https://dl.flynn.io/cli | zcat >$L && chmod +x $L
-$ sudo bash < <(curl -fsSL https://dl.flynn.io/install-flynn)
-$ /sbin/modprobe zfs
-```
+<script src="https://gist.github.com/maclover7/094ee48c027bdd288497.js"></script>
 
 2. Run the following command to get the discovery URL for your one-node
    cluster. If you want to have multiple nodes of Flynn, please see
 [their documentation](https://flynn.io/docs/installation#ubuntu-14.04-amd64) or tweet at me (@applerebel) for more information.
 
-`sudo flynn-host init --init-discovery`
+<script src="https://gist.github.com/maclover7/0f0b067eda9c00e8b33c.js"></script>
 
 3. Run the following two commands to get your one-node cluster going.
    Make sure the second command returns the correct response!
-```
-$ sudo start flynn-host
-$ sudo status flynn-host # --> This command should include `flynn-host start/running`. If it says `stop/waiting` instead, check out the logs at `/var/log/upstart/flynn-host.log` for more information.
-```
+
+<script src="https://gist.github.com/maclover7/53e6c3eea0a46081875a.js"></script>
 
 4. Set up your cluster via the next command. Make sure to replace the
    CLUSTER_DOMAIN value with whatever the domain will be for your web
@@ -54,21 +48,18 @@ formula to get a domain name: site.IP_ADDRESS.xip.io. An example of this
 would be 10.0.0.1.xip.io. Also, make sure you repalce the --discovery
 URL with the URL that was generated earlier.
 
-````
-sudo \
-    CLUSTER_DOMAIN=demo.localflynn.com \
-    flynn-host bootstrap \
-    --discovery https://discovery.flynn.io/clusters/53e8402e-030f-4861-95ba-d5b5a91b5902
-````
+<script src="https://gist.github.com/maclover7/460a59ac08198b98d9e1.js"></script>
 
 * If it's saying it can't find the cluster, then you should powercycle
-flynn-host like so: `stop flynn-host && start flynn-host`
+flynn-host like so:
+
+<script src="https://gist.github.com/maclover7/a6b4982e3bfccfb845ac.js"></script>
 
 * The above command should say "Flynn bootstrapping complete." if
   everything finished successfully. It should return a command to run
 that will look something like this:
 
-`flynn cluster add -p REktHVsDrKFed7ACeKJCt9xF3TrMd96d1+N3Nr5BArY= default site.104.131.189.57.xip.io fdf9cdda89785ef655e7e787daec8be2`
+<script src="https://gist.github.com/maclover7/d9113bacf0a1b1ab5a8b.js"></script>
 
 this means it's time to install the local Flynn client now on our dev
 machine! Also, make sure you take note of the dashboard URL and login
@@ -82,7 +73,7 @@ development machine.
 
 1. To install the CLI itself, run the following command:
 
-`L=/usr/local/bin/flynn && curl -sSL -A "`uname -sp`" https://dl.flynn.io/cli | zcat >$L && chmod +x $L`
+<script src="https://gist.github.com/maclover7/01d292417fbf901d603e.js"></script>
 
 2. Next, run the command that was returned above from Part 1, that
    begins with 'flynn cluster add ....'. This will associate your local
@@ -121,10 +112,7 @@ for the world to see. Let's get started!
 1. 'cd' into any project you have that has a Procfile in it. If you
    don't have one, you can run this in your terminal:
 
-````
-$ git clone https://github.com/flynn-examples/ruby-flynn-example.git
-$ cd ruby-flynn-example
-```
+<script src="https://gist.github.com/maclover7/5fa28e36630df3e96afd.js"></script>
 
 2. Next, we're going to create a Flynn app, that will power our website.
    Run the following command below, and substitute APP_NAME with
@@ -134,7 +122,7 @@ whatever you'd like to call your app.
 
 3. The moment of truth! It's finally time to git push up to Flynn. The previous command setup a git remote for us, so now all we have to do is just push up to Flynn, and the rest is handled for us!
 
-`git push flynn master`
+<script src="https://gist.github.com/maclover7/041449d7a66abd12eef3.js"></script>
 
 ---
 
