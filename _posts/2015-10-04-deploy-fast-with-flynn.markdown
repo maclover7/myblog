@@ -28,9 +28,11 @@ go.
 you'll be building! This command may take a few minutes to run, so don't
 be worried if it's taking a little while.
 
-Command 1: `L=/usr/local/bin/flynn && curl -sSL -A "`uname -sp`" https://dl.flynn.io/cli | zcat >$L && chmod +x $L`
-Command 2: `sudo bash < <(curl -fsSL https://dl.flynn.io/install-flynn)`
-Command 3: `/sbin/modprobe zfs`
+```
+$ L=/usr/local/bin/flynn && curl -sSL -A "`uname -sp`" https://dl.flynn.io/cli | zcat >$L && chmod +x $L
+$ sudo bash < <(curl -fsSL https://dl.flynn.io/install-flynn)
+$ /sbin/modprobe zfs
+```
 
 2. Run the following command to get the discovery URL for your one-node
    cluster. If you want to have multiple nodes of Flynn, please see
@@ -40,9 +42,10 @@ Command 3: `/sbin/modprobe zfs`
 
 3. Run the following two commands to get your one-node cluster going.
    Make sure the second command returns the correct response!
-
-Command 1: `sudo start flynn-host`
-Command 2: `sudo status flynn-host` --> This command should include `flynn-host start/running`. If it says `stop/waiting` instead, check out the logs at `/var/log/upstart/flynn-host.log` for more information.
+```
+$ sudo start flynn-host
+$ sudo status flynn-host # --> This command should include `flynn-host start/running`. If it says `stop/waiting` instead, check out the logs at `/var/log/upstart/flynn-host.log` for more information.
+```
 
 4. Set up your cluster via the next command. Make sure to replace the
    CLUSTER_DOMAIN value with whatever the domain will be for your web
@@ -51,11 +54,12 @@ formula to get a domain name: site.IP_ADDRESS.xip.io. An example of this
 would be 10.0.0.1.xip.io. Also, make sure you repalce the --discovery
 URL with the URL that was generated earlier.
 
-`sudo \
+````
+sudo \
     CLUSTER_DOMAIN=demo.localflynn.com \
     flynn-host bootstrap \
     --discovery https://discovery.flynn.io/clusters/53e8402e-030f-4861-95ba-d5b5a91b5902
-`
+````
 
 * If it's saying it can't find the cluster, then you should powercycle
 flynn-host like so: `stop flynn-host && start flynn-host`
@@ -117,8 +121,10 @@ for the world to see. Let's get started!
 1. 'cd' into any project you have that has a Procfile in it. If you
    don't have one, you can run this in your terminal:
 
-`git clone https://github.com/flynn-examples/ruby-flynn-example.git`
-`cd ruby-flynn-example`
+````
+$ git clone https://github.com/flynn-examples/ruby-flynn-example.git
+$ cd ruby-flynn-example
+```
 
 2. Next, we're going to create a Flynn app, that will power our website.
    Run the following command below, and substitute APP_NAME with
