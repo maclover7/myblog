@@ -1,12 +1,53 @@
-# Site settings
-title: Sparkling Code
-email: me@jonathanmoss.me
-description: Your code should be so good, it sparkles.
-baseurl: "http://www.sparklingcode.co"
-url: "http://www.sparkingcode.co"
-twitter_username: applerebel
-github_username:  maclover7
+ #Site settings
+##title: Sparkling Code
+##email: me@jonathanmoss.me
+##description: Your code should be so good, it sparkles.
+##baseurl: "http://www.sparklingcode.co"
+##url: "http://www.sparkingcode.co"
+##twitter_username: applerebel
+##github_username:  maclover7
 
-# Build settings
-markdown: kramdown
-exclude: ["Gemfile", "Gemfile.lock"]
+ #Build settings
+#markdown: kramdown
+#exclude: ["Gemfile", "Gemfile.lock"]
+
+name: Sparkling Code
+description: Your code should be so good, it sparkles.
+meta_description: "Your code should be so good, it sparkles."
+
+aboutPage: true
+
+markdown: redcarpet
+highlighter: pygments
+
+paginate: 20
+baseurl: /
+domain_name: 'http://www.sparklingcode.co'
+google_analytics: 'UA-58452343-3'
+
+# Details for the RSS feed generator
+url:            'http://www.sparklingcode.co'
+author:         'Jon Moss'
+authorTwitter:  'applerebel'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post
