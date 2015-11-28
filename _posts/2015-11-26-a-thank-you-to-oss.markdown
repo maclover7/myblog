@@ -15,7 +15,7 @@ who build and maintain the programming infrastructure on a daily basis.
 Open source software is very important in sharing code and building on
 top of each other for a better programming environment. Without this
 vital work, we would each be using either proprietary enterprise
-solutions, or rewriting the same web framework thrity times over.
+solutions, or rewriting the same web framework thirty times over.
 
 Now is the time of year to consider what you can do for the open source projects
 that you use on a daily basis. Reach out to the maintainer(s), and see
