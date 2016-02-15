@@ -5,7 +5,7 @@ date:   2015-08-27 12:00:00
 categories: payments stripe
 ---
 
-Welcome to my first blog post! Sorry about the delay between my welcome and initial technical post -- been very busy so far this summer. This blog post will mainly be focusing on payments, and how to interact with Stripe's Ruby library.
+Welcome to my first blog post! Sorry about the delay between my welcome and initial technical post -- I've been very busy so far this summer. This blog post will mainly be focusing on payments, and how to interact with Stripe's Ruby library.
 
 So, let's get started by talking about what Stripe actually is. Stripe
 is a company which provides a simple API (and client libraries in many
@@ -118,7 +118,7 @@ user =
 - Where you have users signing up for subscriptions, add the following.
 You may want to store the `stripe_customer.id` and
 `stripe_subscription.id` values in the database, so you can edit
-subscriptions in the future. An example of when you would need this is
+subscriptions in the future. An example of when you would need this, is
 if a user wants to change their subscription's plan.
 
 {% highlight ruby %}

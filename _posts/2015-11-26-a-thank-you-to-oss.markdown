@@ -6,12 +6,13 @@ categories: oss thanksgiving
 ---
 
 It's that time of year again -- turkeys are being carved, delicious
-cakes are being served people are fighting with each other over TVs at
+cakes are being served, and people are fighting with each other over TVs at
 Walmart.
 
-I think its' very important that as we are giving thanks to so many
-people at this time of year, that we take our time to thank the pople
-who build and maintain the programming infrastructure on a daily basis.
+I think it's very important that as we are giving thanks to so many
+people at this time of year, that we take our time to thank the people
+who build and maintain the programming infrastructure that
+thousands of people rely on, on a daily basis.
 Open source software is very important in sharing code and building on
 top of each other for a better programming environment. Without this
 vital work, we would each be using either proprietary enterprise
