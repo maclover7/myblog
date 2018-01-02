@@ -9,7 +9,7 @@ highlighter: pygments
 exclude: ["Gemfile", "Gemfile.lock"]
 
 paginate: 20
-baseurl: 'http://www.sparklingcode.co'
+baseurl: 'http://www.sparklingcode.co/'
 domain_name: 'http://www.sparklingcode.co'
 google_analytics: 'UA-58452343-3'
 
