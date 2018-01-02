@@ -4,7 +4,7 @@ meta_description: "Your code should be so good, it sparkles."
 
 aboutPage: true
 
-markdown: redcarpet
+kramdown: redcarpet
 highlighter: pygments
 exclude: ["Gemfile", "Gemfile.lock"]
 
