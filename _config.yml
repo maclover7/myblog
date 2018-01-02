@@ -5,7 +5,7 @@ meta_description: "Your code should be so good, it sparkles."
 aboutPage: true
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 exclude: ["Gemfile", "Gemfile.lock"]
 
 paginate: 20
